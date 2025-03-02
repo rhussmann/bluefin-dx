@@ -19,6 +19,11 @@ dnf install -y tmux
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+
+dnf5 -y copr enable szydell/system76
+dnf5 -y install system76-driver
+dnf5 -y cope disable szydell/system76
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
