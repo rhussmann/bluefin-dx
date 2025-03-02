@@ -21,8 +21,14 @@ set -ouex pipefail
 
 dnf5 -y copr enable szydell/system76
 dnf5 -y install system76-driver
+dnf5 -y install firmware-manager system76-power system76-dkms
 dnf5 -y copr disable szydell/system76
 
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+systemctl enable system76-firmware-daemon
+systemctl mask power-profiles-daemon.service
+systemctl enable com.system76.PowerDaemon.service system76-power-wake
+systemctl enable dkms
