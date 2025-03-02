@@ -29,6 +29,6 @@ dnf5 -y copr disable szydell/system76
 systemctl enable podman.socket
 
 systemctl enable system76-firmware-daemon
+systemctl mask power-profiles-daemon.service
 systemctl enable com.system76.PowerDaemon.service system76-power-wake
-systemctl start com.system76.PowerDaemon.service
 systemctl enable dkms
