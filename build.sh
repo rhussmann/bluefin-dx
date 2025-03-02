@@ -23,6 +23,13 @@ dnf5 -y copr enable szydell/system76
 dnf5 -y install system76-driver
 dnf5 -y copr disable szydell/system76
 
+dnf5 -y install firmware-manager system76-dkms
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+systemctl enable --now system76-firmware-daemon
+systemctl enable com.system76.PowerDaemon.service system76-power-wake
+systemctl start com.system76.PowerDaemon.service
+systemctl enable dkms
