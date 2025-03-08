@@ -24,7 +24,7 @@ dnf5 -y install system76-driver
 dnf5 -y install firmware-manager system76-power system76-dkms
 dnf5 -y copr disable szydell/system76
 
-dnf5 -y copy enable pgdev/ghostty
+dnf5 -y copr enable pgdev/ghostty
 dnf5 -y install ghostty
 dnf5 -y copr disable pgdev/ghostty
 
