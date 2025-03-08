@@ -13,6 +13,14 @@ FROM ghcr.io/ublue-os/bluefin-dx:latest
 ## make modifications desired in your image and install packages by modifying the build.sh script
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
+### add 1password
+COPY --from=ghcr.io/blue-build/modules/bling:latest /modules/bling/installers/1password.sh /tmp/1password.sh
+RUN chmod +x /tmp/1password.sh && \
+    ONEPASSWORD_RELEASE_CHANNEL=stable \
+    GID_ONEPASSWORD=1500 \
+    GID_ONEPASSWORDCLI=1600 \
+        /tmp/1password.sh
+
 COPY build.sh /tmp/build.sh
 
 RUN mkdir -p /var/lib/alternatives && \
