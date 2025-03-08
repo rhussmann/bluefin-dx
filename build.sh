@@ -24,12 +24,6 @@ dnf5 -y install system76-driver
 dnf5 -y install firmware-manager system76-power system76-dkms
 dnf5 -y copr disable szydell/system76
 
-# Setup 1Password repos
-
-echo "::group:: ===Desktop Packages==="
-/ctx/desktop-packages.sh
- echo "::endgroup::"
-
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
