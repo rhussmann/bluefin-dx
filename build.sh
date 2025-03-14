@@ -31,6 +31,9 @@ dnf5 -y copr enable pgdev/ghostty
 dnf5 -y install ghostty
 dnf5 -y copr disable pgdev/ghostty
 
+#### Install system76 driver
+system76-driver-cli
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
