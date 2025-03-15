@@ -16,6 +16,7 @@ dnf5 install -y \
      xdg-desktop-portal-wlr network-manager-applet \
      pasystray swaylock brightnessctl
 
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
