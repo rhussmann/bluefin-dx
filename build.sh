@@ -14,7 +14,8 @@ set -ouex pipefail
 dnf5 install -y \
      dex-autostart sway waybar ulauncher dunst wlogout \
      xdg-desktop-portal-wlr network-manager-applet \
-     pasystray swaylock
+     pasystray swaylock brightnessctl
+
 
 # Use a COPR Example:
 #
@@ -31,6 +32,9 @@ dnf5 -y copr disable szydell/system76
 dnf5 -y copr enable pgdev/ghostty
 dnf5 -y install ghostty
 dnf5 -y copr disable pgdev/ghostty
+
+#### Install system76 driver
+system76-driver-cli
 
 #### Example for enabling a System Unit File
 
