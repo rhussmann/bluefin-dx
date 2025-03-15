@@ -13,7 +13,8 @@ set -ouex pipefail
 # dnf install -y tmux
 dnf5 install -y \
      dex-autostart sway waybar ulauncher dunst wlogout \
-     xdg-desktop-portal-wlr network-manager-applet pasystray
+     xdg-desktop-portal-wlr network-manager-applet pasystray \
+     brightnessctl
 
 # Use a COPR Example:
 #
