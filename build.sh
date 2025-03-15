@@ -16,7 +16,6 @@ dnf5 install -y \
      xdg-desktop-portal-wlr network-manager-applet \
      pasystray swaylock brightnessctl
 
-
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
@@ -34,7 +33,7 @@ dnf5 -y install ghostty
 dnf5 -y copr disable pgdev/ghostty
 
 #### Install system76 driver
-system76-driver-cli
+system76-driver-cli --model galp2
 
 #### Example for enabling a System Unit File
 
