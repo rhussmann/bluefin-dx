@@ -14,7 +14,10 @@ set -ouex pipefail
 dnf5 install -y \
      dex-autostart sway waybar ulauncher dunst wlogout \
      xdg-desktop-portal-wlr network-manager-applet \
-     pasystray swaylock brightnessctl
+     pasystray swaylock brightnessctl \
+     rtl-sdr- gr-osmosdr-
+
+dnf5 group install 'Electronic Lab'
 
 # Use a COPR Example:
 #
