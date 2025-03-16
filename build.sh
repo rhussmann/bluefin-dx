@@ -17,6 +17,8 @@ dnf5 install -y \
      pasystray swaylock brightnessctl \
      rtl-sdr
 
+dnf5 group install 'Electronic Lab'
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
