@@ -16,7 +16,7 @@ dnf5 install -y \
      xdg-desktop-portal-wlr network-manager-applet \
      pasystray swaylock brightnessctl \
      blueman rtl-sdr \
-     glibc.i686 gconf2
+     glibc.i686 GConf2
 
 # Use a COPR Example:
 #
