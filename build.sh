@@ -16,7 +16,10 @@ dnf5 install -y \
      xdg-desktop-portal-wlr network-manager-applet \
      pasystray swaylock brightnessctl \
      blueman rtl-sdr \
-     glibc.i686 GConf2
+     glibc.i686 GConf2 libnsl  # CodeComposer 12 dependencies
+
+# Link library to previous version (CodeComposer 12 dependency)
+ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
 
 # Use a COPR Example:
 #
