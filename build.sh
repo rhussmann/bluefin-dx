@@ -18,6 +18,9 @@ dnf5 install -y \
      blueman rtl-sdr \
      libnsl python3.9 glibc.i686
 
+# Link library to previous version (hopefully)
+ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
