@@ -15,7 +15,8 @@ dnf5 install -y \
      dex-autostart sway waybar ulauncher dunst wlogout \
      xdg-desktop-portal-wlr network-manager-applet \
      pasystray swaylock brightnessctl \
-     blueman rtl-sdr
+     blueman rtl-sdr \
+     libnsl python3.9 glibc.i686
 
 # Use a COPR Example:
 #
