@@ -16,10 +16,7 @@ dnf5 install -y \
      xdg-desktop-portal-wlr network-manager-applet \
      pasystray swaylock brightnessctl \
      blueman rtl-sdr \
-     libnsl python3.9 glibc.i686
-
-# Link library to previous version (hopefully)
-ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
+     glibc.i686 gconf2
 
 # Use a COPR Example:
 #
