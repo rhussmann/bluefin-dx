@@ -30,9 +30,14 @@ dnf5 -y install system76-driver
 dnf5 -y install firmware-manager system76-power system76-dkms
 dnf5 -y copr disable szydell/system76
 
-dnf5 -y copr enable pgdev/ghostty
+# dnf5 -y copr enable pgdev/ghostty
+# dnf5 -y install ghostty
+# dnf5 -y copr disable pgdev/ghostty
+
+# Replace this with above once correct zig version is merged
+dnf5 -y copr enable alternateved/ghostty
 dnf5 -y install ghostty
-dnf5 -y copr disable pgdev/ghostty
+dnf5 -y copr disable alternateved/ghostty
 
 #### Install system76 driver
 system76-driver-cli --model galp2
