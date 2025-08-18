@@ -28,15 +28,16 @@ ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
+# Enable System76 drivers
 dnf5 -y copr enable szydell/system76
 dnf5 -y install system76-driver
 dnf5 -y install firmware-manager system76-power system76-dkms
 dnf5 -y copr disable szydell/system76
 
-# GHOSTTY CURRENTLY NOT COMPLATIBLE; DISABLING FOR NOW
-# dnf5 -y copr enable pgdev/ghostty
-# dnf5 -y install ghostty
-# dnf5 -y copr disable pgdev/ghostty
+# Install Ghostty
+dnf5 -y copr enable alternateved/ghostty
+dnf5 -y install ghostty
+dnf5 -y copr disable alternateved/ghostty
 
 #### Install system76 driver
 system76-driver-cli --model galp2
