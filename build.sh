@@ -28,9 +28,6 @@ ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-# Add kernel headers
-dnf5 -y install linux-headers-6.11.0-1018-azure
-
 # Enable akmods for System76 drivers
 dnf5 -y copr enable ublue/os-akmods
 dnf5 -y copr enable szydell/system76
