@@ -29,7 +29,7 @@ ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
 # dnf5 -y copr disable ublue-os/staging
 
 # Enable akmods for System76 drivers
-dnf5 -y copr enable ublue/os-akmods
+dnf5 -y copr enable ublue-os/akmods
 dnf5 -y copr enable szydell/system76
 dnf5 -y install system76-driver
 dnf5 -y install firmware-manager system76-power system76-dkms
