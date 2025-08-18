@@ -21,6 +21,9 @@ dnf5 install -y \
 # Link library to previous version (CodeComposer 12 dependency)
 ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
 
+# Install kernel headers
+dnf5 -y install kernel-devel
+
 # Use a COPR Example:
 #
 # dnf5 -y copr enable ublue-os/staging
@@ -36,7 +39,7 @@ dnf5 -y install firmware-manager system76-power system76-dkms
 
 # Disable COPRs
 dnf5 -y copr disable szydell/system76
-dnf5 -y copr disable ublue/os-akmods
+dnf5 -y copr disable ublue-os/akmods
 
 #### Install system76 driver
 system76-driver-cli --model galp2
