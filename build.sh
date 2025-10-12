@@ -12,7 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 # dnf install -y tmux
 dnf5 install -y \
-     dex-autostart sway waybar ulauncher dunst wlogout \
+     dex-autostart sway waybar dunst wlogout \
      xdg-desktop-portal-wlr network-manager-applet \
      pasystray swaylock brightnessctl \
      blueman rtl-sdr \
