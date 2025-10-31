@@ -17,7 +17,6 @@ dnf5 install -y \
      pasystray swaylock brightnessctl \
      blueman rtl-sdr \
      wev \
-     glibc.i686 GConf2 libnsl \  # CodeComposer 12 dependencies
      kernel-devel
 
 # Link library to previous version (CodeComposer 12 dependency)
@@ -33,7 +32,7 @@ ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
 # Enable System76 drivers
 dnf5 -y copr enable szydell/system76
 dnf5 -y install system76-driver
-dnf5 -y install firmware-manager system76-power system76-dkms
+dnf5 -y install firmware-manager system76-power
 dnf5 -y copr disable szydell/system76
 
 # Install Ghostty
@@ -51,4 +50,4 @@ systemctl enable podman.socket
 systemctl enable system76-firmware-daemon
 systemctl mask power-profiles-daemon.service
 systemctl enable com.system76.PowerDaemon.service system76-power-wake
-systemctl enable dkms
+# systemctl enable dkms
