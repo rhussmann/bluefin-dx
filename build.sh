@@ -17,7 +17,8 @@ dnf5 install -y \
      pasystray swaylock brightnessctl \
      blueman rtl-sdr \
      wev \
-     kernel-devel
+     kernel-devel \
+     glibc.i686
 
 # Link library to previous version (CodeComposer 12 dependency)
 ln -s /usr/lib64/libtinfo.so.6 /usr/lib64/libtinfo.so.5
