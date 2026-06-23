@@ -19,7 +19,11 @@ RUN chmod +x /tmp/1password.sh && \
     ONEPASSWORD_RELEASE_CHANNEL=stable \
     GID_ONEPASSWORD=1500 \
     GID_ONEPASSWORDCLI=1600 \
-        /tmp/1password.sh
+        /tmp/1password.sh && \
+    mv /opt/1Password /usr/lib/1Password && \
+    rm -f /usr/bin/1password && \
+    ln -s /usr/lib/1Password/1password /usr/bin/1password && \
+    echo 'L  /opt/1Password  -  -  -  -  /usr/lib/1Password' > /usr/lib/tmpfiles.d/onepassword.conf
 
 COPY build.sh /tmp/build.sh
 
