@@ -16,7 +16,7 @@ FROM ghcr.io/ublue-os/bluefin-dx:latest
 ### add 1password
 COPY --from=ghcr.io/blue-build/modules/bling:latest /modules/bling/installers/1password.sh /tmp/1password.sh
 RUN chmod +x /tmp/1password.sh && \
-    mkdir -p /usr/lib && \
+    rm -f /usr/local && mkdir -p /usr/local && \
     ONEPASSWORD_RELEASE_CHANNEL=stable \
     GID_ONEPASSWORD=1500 \
     GID_ONEPASSWORDCLI=1600 \
